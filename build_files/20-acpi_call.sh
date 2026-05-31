@@ -12,7 +12,7 @@ dnf5 install -y gcc make git \
     elfutils-libelf-devel
 
 echo "[acpi_call] Cloning upstream source..."
-git clone --depth 1 https://github.com/mkottman/acpi_call.git /tmp/acpi_call
+git clone --depth 1 https://github.com/nix-community/acpi_call.git /tmp/acpi_call
 
 echo "[acpi_call] Compiling module..."
 make -C /tmp/acpi_call KDIR="/lib/modules/${KERNEL_VERSION}/build"
