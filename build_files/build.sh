@@ -22,3 +22,16 @@ dnf5 install -y tmux
 #### Example for enabling a System Unit File
 
 systemctl enable podman.socket
+
+### acpi_call
+
+# Get the kernel version installed in the image so DKMS can compile against it
+KERNEL_VERSION=$(rpm -q --queryformat '%{VERSION}-%{RELEASE}.%{ARCH}\n' kernel | head -1)
+
+# Install kernel headers so DKMS can compile the module during image build
+dnf5 install -y "kernel-devel-${KERNEL_VERSION}"
+
+# Install acpi_call via COPR rhea/acpi_call
+dnf5 -y copr enable rhea/acpi_call
+dnf5 -y install acpi_call-dkms
+dnf5 -y copr disable rhea/acpi_call
