@@ -8,6 +8,7 @@ A personal custom [Bazzite](https://bazzite.gg) image for my Dell G15 laptop. Th
 
 - **acpi_call** — kernel module compiled from source for fan/temperature control
 - **AWCC** (Alienware Command Center for Linux) — fan and thermal management GUI
+- **Syncthing** — file synchronization (enable after first boot: `systemctl --user enable --now syncthing`)
 
 ## Dependencies / upstream projects
 
