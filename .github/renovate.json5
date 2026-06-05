@@ -6,6 +6,15 @@
 
   "rebaseWhen": "never",
 
+  "regexManagers": [
+    {
+      "fileMatch": ["^build_files/20-awcc\\.sh$"],
+      "matchStrings": ["AWCC_VERSION=\"(?<currentValue>[^\"]+)\""],
+      "depNameTemplate": "tr1xem/AWCC",
+      "datasourceTemplate": "github-releases",
+    }
+  ],
+
   "packageRules": [
     {
       "automerge": true,
