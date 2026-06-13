@@ -2,7 +2,7 @@
 
 set -ouex pipefail
 
-AWCC_VERSION="1.18.1"
+AWCC_VERSION="1.19.0"
 AWCC_URL="https://github.com/tr1xem/AWCC/releases/download/v${AWCC_VERSION}/AWCC-v${AWCC_VERSION}.tar.gz"
 
 echo "[awcc] Installing runtime dependencies..."
